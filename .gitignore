@@ -1,4 +1,5 @@
 application/css/*.css
+application/css/*.css.map
 application/js/*.js
 
 # Add an exception here if you need to include scripts or stylesheets, but please consider bundling them instead.
