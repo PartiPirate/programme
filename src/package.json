@@ -1,0 +1,19 @@
+{
+  "name": "programme",
+  "version": "0.0.1",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:css": "node-sass --output-style compressed --include-path=node_modules --source-map true --precision 6 css/*.scss -o ../application/css/",
+    "build:app": "browserify js/app.js | uglifyjs -m --keep-fnames > ../application/js/app.js",
+    "build:all": "npm run build:css && npm run build:app"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "",
+  "devDependencies": {
+    "node-sass": "^4.7.2",
+    "uglify-js": "^3.2.2",
+    "browserify": "^15.2.0"
+  }
+}

@@ -1,0 +1,49 @@
+@import '../_vars.scss';
+
+
+.hero-container {
+	text-align: center;
+	background-color: $pp_dark_bg;
+	color: $pp_dark_fg;
+	overflow: hidden;
+	min-height: 60vh;
+
+	padding: 4rem;
+	padding: 4rem calc(2rem + env(safe-area-inset-right)) 4rem calc(2rem + env(safe-area-inset-left));
+
+	display: grid;
+	align-items: center;
+
+	.hero {
+		padding-bottom: 4rem; 
+		h1 {
+			font-weight: normal;
+
+			font-size: 3rem;
+			@media screen and (min-width: $breakpoint_tablet){
+				font-size: 4rem;
+			}
+			letter-spacing: -0.04em;
+
+			text-transform: uppercase;
+			font-weight: bold;
+			text-shadow: 0.4em 0.4em 0.4em rgba(0,0,0,0.6);
+
+			span {
+				color: $pp_purple_light;
+			}
+
+			margin: 0 auto;
+			margin-bottom: 4rem;
+			max-width: $page_width;
+		}
+
+		p {
+			margin: 0 auto;
+			max-width: $page_width;
+			font-size: 1.1em;
+			line-height: 1.1em;
+			text-shadow: 0.1em 0.1em 0.1em rgba(0,0,0,0.4);
+		}
+	}
+}

@@ -1,0 +1,47 @@
+@media print {
+	header {
+		position: static !important;
+	}
+
+	body {
+		font-size: 12px;
+		background: white;
+		margin: 1cm;
+	}
+
+	h1, h2 {
+		background: transparent !important;
+		margin-top: 1em !important;
+		position: static !important;
+	}
+
+	section {
+		&:not(.sub-section){
+			page-break-before: always;
+		}
+
+
+		.sub-section {
+			.content {
+				display: block !important;
+				opacity: 1 !important;
+				animation: none;
+
+				p {
+					page-break-inside: avoid;
+				}
+			}
+
+			h1::before {
+				display: none !important;
+			}
+		}
+	}
+
+}
+
+@page {
+	size: portrait;
+
+	margin: 5cm;
+}

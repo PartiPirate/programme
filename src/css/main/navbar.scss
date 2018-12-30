@@ -1,0 +1,61 @@
+@import '_vars.scss';
+
+navbar {
+	display: none;
+}
+
+@media screen and (min-width: 1024px) { // fixme
+	
+	navbar {
+		-webkit-overflow-scrolling: touch;
+		display: block;
+		position: -webkit-sticky;
+		position: sticky;
+		top: calc(4rem + 2*0.6rem);
+		width: 25vw;
+		height: calc(100vh - 4rem - 2*0.6rem);
+		left: 0;
+		background-color: $pp_light_bg;
+		float: left;
+		overflow: auto;
+
+		ul.main-list {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		.cat-title {
+			font-variant: small-caps;
+			position: -webkit-sticky;
+			position: sticky;
+			top: 0;
+			background-color: #ccc;
+			display: block;
+			padding: 0.4rem;
+			font-size: 1.1em;
+		}
+
+		.navbar-item {
+			color: grey;
+			&.active {
+				color: $pp_purple;
+				font-weight: bold;
+			}
+		}
+	}
+
+	section:not(.fancy){
+		margin-left: 25vw;
+		section {
+			margin-left: 0;
+		}
+	}
+
+	
+	footer {
+		position: -webkit-sticky;
+		position: sticky;
+		clear: both;
+	}
+}
